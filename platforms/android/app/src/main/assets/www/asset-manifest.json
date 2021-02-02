@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "./static/css/main.13e1e24a.chunk.css",
-    "main.js": "./static/js/main.623591df.chunk.js",
-    "main.js.map": "./static/js/main.623591df.chunk.js.map",
+    "main.js": "./static/js/main.7e6e215e.chunk.js",
+    "main.js.map": "./static/js/main.7e6e215e.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.818af572.js",
     "runtime-main.js.map": "./static/js/runtime-main.818af572.js.map",
-    "static/js/2.1c62019f.chunk.js": "./static/js/2.1c62019f.chunk.js",
-    "static/js/2.1c62019f.chunk.js.map": "./static/js/2.1c62019f.chunk.js.map",
+    "static/js/2.6f01796f.chunk.js": "./static/js/2.6f01796f.chunk.js",
+    "static/js/2.6f01796f.chunk.js.map": "./static/js/2.6f01796f.chunk.js.map",
     "static/js/3.419e5508.chunk.js": "./static/js/3.419e5508.chunk.js",
     "static/js/3.419e5508.chunk.js.map": "./static/js/3.419e5508.chunk.js.map",
     "index.html": "./index.html",
     "static/css/main.13e1e24a.chunk.css.map": "./static/css/main.13e1e24a.chunk.css.map",
-    "static/js/2.1c62019f.chunk.js.LICENSE.txt": "./static/js/2.1c62019f.chunk.js.LICENSE.txt",
+    "static/js/2.6f01796f.chunk.js.LICENSE.txt": "./static/js/2.6f01796f.chunk.js.LICENSE.txt",
     "static/media/average.9152ffbf.svg": "./static/media/average.9152ffbf.svg",
     "static/media/brightness.f2162df0.svg": "./static/media/brightness.f2162df0.svg",
     "static/media/home-automation.1ec2cf5b.svg": "./static/media/home-automation.1ec2cf5b.svg",
@@ -21,13 +21,15 @@
     "static/media/humidity.41d15f93.svg": "./static/media/humidity.41d15f93.svg",
     "static/media/lightbulb-closed2.909d2ca0.svg": "./static/media/lightbulb-closed2.909d2ca0.svg",
     "static/media/lightbulb-open2.d67991f2.svg": "./static/media/lightbulb-open2.d67991f2.svg",
+    "static/media/motion.8d3d8610.svg": "./static/media/motion.8d3d8610.svg",
+    "static/media/no-motion.de1b03d8.svg": "./static/media/no-motion.de1b03d8.svg",
     "static/media/not-found.cd5a9b2a.svg": "./static/media/not-found.cd5a9b2a.svg",
     "static/media/thermometer.26bec6cd.svg": "./static/media/thermometer.26bec6cd.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.818af572.js",
-    "static/js/2.1c62019f.chunk.js",
+    "static/js/2.6f01796f.chunk.js",
     "static/css/main.13e1e24a.chunk.css",
-    "static/js/main.623591df.chunk.js"
+    "static/js/main.7e6e215e.chunk.js"
   ]
 }

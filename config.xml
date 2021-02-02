@@ -21,7 +21,10 @@
     <prefernce name="AndroidPersistentFileLocation" value="Compatibility"/>
     <platform name="android">
         <allow-intent href="market:*" />
-<!--        <icon background="www/static/media/home-automation3.2481b425.svg" density="mdpi" foreground="www/static/media/home-automation3.2481b425.svg" />-->
+        <icon src="www/home-automation128.png" density="ldpi"/>
+        <icon src="www/home-automation256.png" density="mdpi"/>
+        <icon src="www/home-automation512.png" density="hdpi"/>
+        <icon src="www/home-automation512.png" density="xhdpi"/>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

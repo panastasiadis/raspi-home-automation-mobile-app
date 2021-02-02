@@ -1,31 +1,29 @@
-import React, {useEffect} from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import {getSensorOutputName} from "../../../utils/SensorSpecific";
+import React, { useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { getSensorOption } from '../../../utils/SensorSpecific';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
     // margin: theme.spacing(1),
-    minWidth: 130,
+    minWidth: 120,
   },
   menuItem: {
     padding: theme.spacing(1),
   },
 }));
 
-
-
-export default function MeasurementTypesMenu(props) {
+export default function SensorOptionsMenu(props) {
   const classes = useStyles();
-  const [selectedType, setSelectedType] = React.useState("");
+  const [selectedOption, setSelectedOption] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
   const handleChange = (event) => {
-    setSelectedType(event.target.value);
-    props.selectMeasurementType(event.target.value);
+    setSelectedOption(event.target.value);
+    props.selectOption(event.target.value);
   };
 
   const handleClose = () => {
@@ -37,25 +35,25 @@ export default function MeasurementTypesMenu(props) {
   };
 
   useEffect(() => {
-    setSelectedType('');
+    setSelectedOption('');
   }, [props.clearEntries]);
-
-  const measurementTypes = getSensorOutputName(props.type);
+  
+  const sensorOptions = getSensorOption(props.outputType);
   return (
     <div>
       <FormControl required className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Measurement</InputLabel>
+        <InputLabel id="demo-controlled-open-select-label">Option</InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"
           open={open}
           onClose={handleClose}
           onOpen={handleOpen}
-          value={selectedType}
+          value={selectedOption}
           onChange={handleChange}
         >
-          {measurementTypes
-            ? measurementTypes.map((el, index) => {
+          {sensorOptions
+            ? sensorOptions.map((el, index) => {
                 return (
                   <MenuItem value={el} key={index}>
                     {el}

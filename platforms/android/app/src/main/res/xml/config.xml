@@ -32,5 +32,9 @@
     <allow-intent href="geo:*" />
     <prefernce name="AndroidPersistentFileLocation" value="Compatibility" />
     <allow-intent href="market:*" />
+    <icon density="ldpi" src="www/home-automation128.png" />
+    <icon density="mdpi" src="www/home-automation256.png" />
+    <icon density="hdpi" src="www/home-automation512.png" />
+    <icon density="xhdpi" src="www/home-automation512.png" />
     <preference name="loglevel" value="DEBUG" />
 </widget>

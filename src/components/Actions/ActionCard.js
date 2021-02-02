@@ -131,6 +131,7 @@ export default function ActionCard(props) {
                     measurementDeviceId={props.action.measurementDeviceId}
                     measurementRoomName={props.action.measurementRoomName}
                     measurementSensorType={props.action.measurementSensorType}
+                    option={props.action.option}
                 />
             );
             break;

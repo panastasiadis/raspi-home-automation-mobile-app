@@ -143,7 +143,7 @@ export default function OutlinedCard(props) {
   }
 
   useEffect(() => {
-    const fetchDevices = async () => {
+    const fetchMeasurements = async () => {
       try {
         setAverageData({ avgTemp: null, avgHum: null, isFetching: true });
         const response = await axios.get(
@@ -174,7 +174,7 @@ export default function OutlinedCard(props) {
       }
     };
 
-    fetchDevices();
+    fetchMeasurements();
 
     const client = mqttService.getClient();
 

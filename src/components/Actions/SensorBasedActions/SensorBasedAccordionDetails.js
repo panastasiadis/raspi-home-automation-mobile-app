@@ -81,15 +81,23 @@ const useStyles = makeStyles((theme) => ({
 export default function TimerActionContent(props) {
     const classes = useStyles();
 
+    let message;
+    if (props.comparisonType && props.quantity) {
+        message = `When ${props.measurementType} is ${props.comparisonType.toLowerCase()} ${
+            props.quantity
+        } ${getMeasurementUnitsName(props.measurementType)}.`;
+    } else if (props.option) {
+        message = `When the value of ${props.measurementType} is "${props.option}".`;
+    }
+
     return (
         <div className={classes.accordionContent}>
             <div className={classes.whenDescription}>
-                <Typography variant="subtitle1">
-                    {`When ${props.measurementType.toLowerCase()} is ${props.comparisonType.toLowerCase()} ${props.quantity} ${getMeasurementUnitsName(props.measurementType)}.`}
-                </Typography>
+                {message}
             </div>
             <div className={classes.whenSensorDescription}>
-                <Typography variant="subtitle1" color="secondary">{"Sensor: " + props.measurementSensorType}</Typography>
+                <Typography variant="subtitle1"
+                            color="secondary">{"Sensor: " + props.measurementSensorType}</Typography>
             </div>
             <div className={classes.whenSensorDescription}>
                 <div className={classes.roomInfo}>
