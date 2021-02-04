@@ -83,7 +83,6 @@ export default function SignInSide(props) {
       })
       .catch((error) => {
         console.log(error)
-        alert(error);
         setLoading(false);
         if (error.response) {
           if (error.response.status === 401 || error.response.status === 400) {
