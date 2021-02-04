@@ -6,14 +6,15 @@ export const onLocationServicesReady = (callback) => {
         locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
         desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
         stationaryRadius: 50,
-        distanceFilter: 500,
+        distanceFilter: 50,
         notificationTitle: 'Background Tracking',
         notificationText: 'Enabled',
         debug: true,
         interval: 10000,
         fastestInterval: 5000,
         activitiesInterval: 10000,
-        url: "http://192.168.1.66:5000/api/location",
+        // url: "http://192.168.1.66:5000/api/location",
+        url: `${backendApiUrl.server}api/location`,
         httpHeaders: {
             'X-FOO': 'bar'
         },

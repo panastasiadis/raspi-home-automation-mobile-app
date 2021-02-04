@@ -10,6 +10,8 @@ import { getToken, removeUserSession, setUserSession } from "./utils/Common";
 import axios from 'axios';
 import FetcherMQTT from "./components/FetcherMQTT";
 import AssetImages from "./utils/AssetImages"
+import {backendApiUrl} from "./utils/Config";
+
 function App() {
   const [authLoading, setAuthLoading] = useState(true);
 
@@ -20,7 +22,7 @@ function App() {
     }
 
     axios
-      .get(`http://localhost:5000/api/verifyToken?token=${token}`)
+      .get(`${backendApiUrl.server}api/verifyToken?token=${token}`)
       .then((response) => {
         setUserSession(response.data.token, response.data.user);
         setAuthLoading(false);
@@ -38,8 +40,6 @@ function App() {
   return (
     <Router>
       <Switch>
-        {/* <Route exact path="/" component={Home} /> */}
-
         <PrivateRoute path="/dashboard" component={FetcherMQTT} />
         <PublicRoute path="/" component={Login} />
       </Switch>

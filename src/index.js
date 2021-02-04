@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './theme/theme';
-// import Location from "./utils/Location"
 
 const renderReactDom = () => {
   ReactDOM.render(

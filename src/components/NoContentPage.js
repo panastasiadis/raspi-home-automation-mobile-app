@@ -30,6 +30,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NoContentPage(props) {
   const classes = useStyles();
+
   return (
     <div className={classes.divNoContent}>
       <Typography

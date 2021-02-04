@@ -6,6 +6,7 @@ import mqttService from "../../utils/MQTT";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 import {FILE_PATH} from "../../utils/CordovaGlobals";
+
 import RouterIcon from "@material-ui/icons/Router";
 import RoomIcon from "@material-ui/icons/Room";
 import BlurCircularIcon from "@material-ui/icons/BlurCircular";
@@ -73,12 +74,14 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
   },
   onOff: {
-    marginLeft: theme.spacing(1),
-    padding: theme.spacing(1),
-    color: theme.palette.secondary.main,
-    borderStyle: "dashed",
-    borderColor: theme.palette.secondary.main,
-    borderRadius: "10px",
+    textAlign: "center",
+    backgroundColor: theme.palette.secondary.main,
+    margin: theme.spacing(1),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    color: "white",
+    borderRadius: "20px",
+    fontWeight: "bold",
   },
   roomInfo: {
     display: "flex",
@@ -89,8 +92,6 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
     backgroundColor: theme.palette.primary.main,
     color: "white",
-    // borderStyle: "solid",
-    // borderColor: theme.palette.secondar.main,
     borderRadius: "10px",
   },
   circularProgress: {
@@ -149,7 +150,7 @@ export default function OutlinedCard(props) {
           <div className={classes.imageLightClosed} />
         )}
         <div className={classes.currentState}>
-          <Typography variant="subtitle1">{"Current state "}</Typography>
+          <Typography variant="body1">{"Current state "}</Typography>
           <Typography className={classes.onOff} variant="subtitle2">
             {relayState}
           </Typography>

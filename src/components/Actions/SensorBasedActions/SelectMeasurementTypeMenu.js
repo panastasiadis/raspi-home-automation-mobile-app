@@ -1,10 +1,10 @@
-import React, {useEffect} from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
-import MenuItem from "@material-ui/core/MenuItem";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import {getSensorOutputName} from "../../../utils/SensorSpecific";
+import React, { useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { getSensorOutputName } from '../../../utils/SensorSpecific';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -16,11 +16,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-
 export default function MeasurementTypesMenu(props) {
   const classes = useStyles();
-  const [selectedType, setSelectedType] = React.useState("");
+  const [selectedType, setSelectedType] = React.useState('');
   const [open, setOpen] = React.useState(false);
 
   const handleChange = (event) => {
@@ -44,7 +42,9 @@ export default function MeasurementTypesMenu(props) {
   return (
     <div>
       <FormControl required className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Measurement</InputLabel>
+        <InputLabel id="demo-controlled-open-select-label">
+          Measurement
+        </InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"

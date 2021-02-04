@@ -1,6 +1,8 @@
 import BrightnessImage from "../assets/brightness.svg";
 import LightBulbOpenImage from "../assets/lightbulb-open2.svg";
 import LightBulbClosedImage from "../assets/lightbulb-closed2.svg";
+import HeatImage from "../assets/heater-on.svg";
+import NoHeatImage from "../assets/heater-off.svg";
 import TemperatureImage from "../assets/thermometer.svg";
 import HumidityImage from "../assets/humidity.svg";
 import AverageImage from "../assets/average.svg";
@@ -9,9 +11,11 @@ import DashboardBackgroundImage from "../assets/home-automation4.svg";
 import AppBarImage from "../assets/home-automation.svg"
 import LoginLogoImage from "../assets/home-automation3.svg";
 import HomeLocationImage from "../assets/home-location.svg";
-import NoMotionImage from "../assets/no-motion.svg";
 import MotionImage from "../assets/motion.svg";
+import NoMotionImage from "../assets/no-motion.svg";
 
+export const NoHeat = NoHeatImage;
+export const Heat = HeatImage; 
 export const Motion = MotionImage;
 export const NoMotion = NoMotionImage;
 export const HomeLocation = HomeLocationImage;

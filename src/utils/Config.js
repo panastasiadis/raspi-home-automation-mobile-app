@@ -1,4 +1,4 @@
 export const backendApiUrl = {
-  server: "http://192.168.1.66:5000/",
-  ws: "http://192.168.1.66:8883",
+  server: 'https://bilious-cow-5121.dataplicity.io/',
+  ws: 'bilious-cow-5121.dataplicity.io/ws',
 };
