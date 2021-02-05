@@ -7,6 +7,7 @@ import Select from '@material-ui/core/Select';
 import RouterIcon from '@material-ui/icons/Router';
 import RoomIcon from '@material-ui/icons/Room';
 import BlurCircularIcon from '@material-ui/icons/BlurCircular';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -20,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
   menuItem: {
     padding: theme.spacing(1),
     display: 'flex',
+  },
+  sensType: {
+    paddingLeft: theme.spacing(1),
+    paddingRight: theme.spacing(1),
   },
 }));
 
@@ -58,43 +63,40 @@ export default function ControlledOpenSelect(props) {
 
   // console.log(selectedSensor);
   return (
-    <div>
-      <FormControl required className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Sensor</InputLabel>
-        <Select
-          labelId="demo-controlled-open-select-label"
-          id="demo-controlled-open-select"
-          open={open}
-          onClose={handleClose}
-          onOpen={handleOpen}
-          value={selectedSensor}
-          onChange={handleChange}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
+      <div>
+        <FormControl required className={classes.formControl}>
+          <InputLabel id="demo-controlled-open-select-label">Sensor</InputLabel>
+          <Select
+              labelId="demo-controlled-open-select-label"
+              id="demo-controlled-open-select"
+              open={open}
+              onClose={handleClose}
+              onOpen={handleOpen}
+              value={selectedSensor}
+              onChange={handleChange}
+          >
+            <MenuItem value="">
+              <em>None</em>
+            </MenuItem>
 
-          {filteredSensors
-            ? filteredSensors.map((sensor) => {
-                return (
-                  <MenuItem value={sensor} key={sensor.name}>
-                    <BlurCircularIcon />
-                    {'  '}
-                    {sensor.name}
-                    {'  '}
-                    <RoomIcon />
-                    {'  '}
-                    {sensor.room}
-                    {'  '}
-                    <RouterIcon />
-                    {'  '}
-                    {sensor.deviceId}
-                  </MenuItem>
-                );
-              })
-            : null}
-        </Select>
-      </FormControl>
-    </div>
+            {filteredSensors
+                ? filteredSensors.map((sensor) => {
+                  return (
+                      <MenuItem value={sensor} key={sensor.name}>
+                        {`${sensor.type} [`}
+                        <BlurCircularIcon fontSize="small" />
+                        <Typography variant="caption">{sensor.name}</Typography>
+                        <RoomIcon fontSize="small" />
+                        <Typography variant="caption">{sensor.room}</Typography>
+                        <RouterIcon fontSize="small" />
+                        <Typography variant="caption">{sensor.deviceId}</Typography>
+                        {']'}
+                      </MenuItem>
+                  );
+                })
+                : null}
+          </Select>
+        </FormControl>
+      </div>
   );
 }
