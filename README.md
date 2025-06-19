@@ -1,4 +1,4 @@
-# Home Automation on a Rapberry Pi | Mobile App
+# Home Automation System on a Raspberry Pi | Mobile App
 
 This project is the mobile application extension of the home automation system developed as part of mt diploma thesis, "A home automation system based on Raspberry Pi". It provides a cross-platform mobile interface for monitoring and controlling smart home devices, complementing the web-based dashboard from the main platform.
 
